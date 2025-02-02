@@ -1,0 +1,37 @@
+<settings>
+
+<servers>
+  <server>
+    <id>awqef-Awqef</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>awqef-Awqef</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>awqef-Awqef</id>
+        <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/Awqef/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+
+<mirrors>
+  <mirror>
+    <id>awqef-Awqef</id>
+    <name>awqef-Awqef</name>
+    <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/Awqef/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+
+</settings>
