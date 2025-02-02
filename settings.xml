@@ -2,7 +2,7 @@
 
 <servers>
   <server>
-    <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
+    <id>Awqef</id>  <!-- ✅ Corrected: Matches repository name exactly -->
     <username>aws</username>
     <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
   </server>
@@ -10,14 +10,14 @@
 
 <profiles>
   <profile>
-    <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
+    <id>Awqef</id>  <!-- ✅ Corrected: Matches repository name exactly -->
     <activation>
       <activeByDefault>true</activeByDefault>
     </activation>
     <repositories>
       <repository>
-        <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
-        <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/awqef/</url> <!-- ✅ Fixed URL casing -->
+        <id>Awqef</id>  <!-- ✅ Corrected: Matches repository name exactly -->
+        <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/Awqef/</url>
       </repository>
     </repositories>
   </profile>
@@ -25,9 +25,9 @@
 
 <mirrors>
   <mirror>
-    <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
-    <name>awqef-repo</name>
-    <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/awqef/</url> <!-- ✅ Fixed URL casing -->
+    <id>Awqef</id>  <!-- ✅ Corrected: Matches repository name exactly -->
+    <name>Awqef</name>
+    <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/Awqef/</url>
     <mirrorOf>*</mirrorOf>
   </mirror>
 </mirrors>

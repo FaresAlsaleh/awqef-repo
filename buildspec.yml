@@ -7,8 +7,8 @@ phases:
   pre_build:
     commands:
       - echo Initializing environment
-      # ✅ Authenticate with AWS CodeArtifact properly
-      - aws codeartifact login --tool mvn --repository awqef-repo --domain awqef --domain-owner 724772089053
+      # ✅ Use correct repository name (Awqef with uppercase A)
+      - export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain awqef --domain-owner 724772089053 --query authorizationToken --output text)
   build:
     commands:
       - echo Build started on `date`
