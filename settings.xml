@@ -2,7 +2,7 @@
 
 <servers>
   <server>
-    <id>awqef-Awqef</id>
+    <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
     <username>aws</username>
     <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
   </server>
@@ -10,28 +10,26 @@
 
 <profiles>
   <profile>
-    <id>awqef-Awqef</id>
+    <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
     <activation>
       <activeByDefault>true</activeByDefault>
     </activation>
     <repositories>
       <repository>
-        <id>awqef-Awqef</id>
-        <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/Awqef/</url>
+        <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
+        <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/awqef/</url> <!-- ✅ Fixed URL casing -->
       </repository>
     </repositories>
   </profile>
 </profiles>
 
-
 <mirrors>
   <mirror>
-    <id>awqef-Awqef</id>
-    <name>awqef-Awqef</name>
-    <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/Awqef/</url>
+    <id>awqef-repo</id>  <!-- ✅ Fixed: Use lowercase -->
+    <name>awqef-repo</name>
+    <url>https://awqef-724772089053.d.codeartifact.us-east-1.amazonaws.com/maven/awqef/</url> <!-- ✅ Fixed URL casing -->
     <mirrorOf>*</mirrorOf>
   </mirror>
 </mirrors>
-
 
 </settings>

@@ -7,15 +7,16 @@ phases:
   pre_build:
     commands:
       - echo Initializing environment
-      - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain Awqef --domain-owner 724772089053 --query authorizationToken --output text`
+      # ✅ Authenticate with AWS CodeArtifact properly
+      - aws codeartifact login --tool mvn --repository awqef-repo --domain awqef --domain-owner 724772089053
   build:
     commands:
       - echo Build started on `date`
-      - mvn -s settings.xml compile
+      - mvn clean compile
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn -s settings.xml package
+      - mvn package
 artifacts:
   files:
     - target/nextwork-web-project.war
